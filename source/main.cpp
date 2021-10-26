@@ -1,7 +1,4 @@
-#include <string>
 #include <iostream>
-#include "Student.h"
-#include "AuxiliaryFunctions.h"
 #include "School.h"
 using namespace std;
 
