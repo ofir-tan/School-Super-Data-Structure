@@ -8,7 +8,7 @@
 - Remove student/worker - logarithmic complexity. 
 - Print details of all students (sorted alphabetically) - linear complexity.
 - Print details of all workers (sorted alphabetically) - linear complexity.
-- Find if student/worker exists by his name - constant time in worst case - SOON
+- Find if student/worker exists by his name - constant time in worst case - SOON.
 - Get student/worker data by his name - logarithmic complexity.
 
 ## Statistical methods:
