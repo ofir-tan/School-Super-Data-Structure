@@ -19,9 +19,7 @@ public:
     void insert(T item);
     void erase(T item);
 
-    double findMedian() {
-        return minHeap.size() > maxHeap.size() ? +*minHeap.top() : ((double) +*maxHeap.top() + +*minHeap.top()) * 0.5;
-    }
+    double findMedian();
 };
 
 #endif //MAIN_CPP_MEDIANFINDER_H
