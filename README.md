@@ -22,7 +22,7 @@
 
 ** space complexity O( n + m ).
 
-*Keywords: modern c++, software design, OOP, Inheritances, polymorphism, data structures, priority queue, red–black tree, trie, vector, string, tree map, set,
+*#modern c++#software design#OOP #Inheritances, polymorphism, data structures, priority queue, red–black tree, trie, vector, string, tree map, set,
 template, Iterators, singleton, enums, STL, operator overloading, comparators, files.*
  
 © Ofir Tanami, 2021.
