@@ -1,6 +1,6 @@
 from DataGenerator import DataGenerator
 
-PATH = r"***"
+PATH = r"***" # destination path
 DATASET = r"***"
 
 def main():
