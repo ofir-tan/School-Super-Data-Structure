@@ -18,7 +18,6 @@ public:
     // method's:
     void insert(T item);
     void erase(T item);
-
     double findMedian();
 };
 
