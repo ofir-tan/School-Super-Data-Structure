@@ -4,7 +4,6 @@
 #include "PriorityQueue.h"
 #include "Comparators.h"
 
-
 template<class T>
 
 class MedianFinder {
