@@ -14,7 +14,7 @@ private:
 public:
     // constructor:
     MedianFinder() : minHeap(true) {};
-    
+
     // method's:
     void insert(T item);
     void erase(T item);

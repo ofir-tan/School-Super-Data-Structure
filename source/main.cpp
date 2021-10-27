@@ -1,20 +1,29 @@
+#include <string>
 #include <iostream>
-#include "School.h"
+
 using namespace std;
+
+#include <fstream>
+#include <vector>
+#include "Student.h"
+#include "AuxiliaryFunctions.h"
+#include "School.h"
+#include "set"
 
 #define PATH (string)"C:/Users/AppTa/Desktop/DataForProject/"
 
 int main(int argc, char *argv[]) {
-    
     School *bgu = School::getInstance(Six, Three);
-    bgu->importStudents(PATH + "Students.txt");
-    bgu->importWorkers(PATH);
+    cout << bgu->importStudents(PATH + "Students.txt") << endl;
+    cout << bgu->importWorkers(PATH) << endl;
 
     bgu->printStudents();
     bgu->printWorkers();
 
+
     bgu->topStudent()->info();
     bgu->topWorker()->info();
+
 
     cout << '\n' << bgu->meanGPA() << endl;
     cout << bgu->meanSalary() << endl;
