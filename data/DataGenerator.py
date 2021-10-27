@@ -12,17 +12,6 @@ def string_of_data(data, size, c=' '):
 def rand_char(a, b):
     return chr(rd.randint(ord(a), ord(b) + 1))
 
-##
-def age(size=1, min=0, max=90):
-    return list(rd.random(size) * max + min + .000001)
-
-def id(size=1):
-    return list(rd.randint(10 ** 8, 999999999, size))
-
-def ip_address(a=0, b=255, size=4):
-    nums = (rd.randint(a, b, size))
-    return ".".join(str(x) for x in nums)
-
 # class implementation:
 class DataGenerator:
 
