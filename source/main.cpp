@@ -7,8 +7,8 @@ using namespace std;
 int main(int argc, char *argv[]) {
     
     School *bgu = School::getInstance(Six, Three);
-    cout << bgu->importStudents(PATH + "Students.txt") << endl;
-    cout << bgu->importWorkers(PATH) << endl;
+    bgu->importStudents(PATH + "Students.txt");
+    bgu->importWorkers(PATH);
 
     bgu->printStudents();
     bgu->printWorkers();
