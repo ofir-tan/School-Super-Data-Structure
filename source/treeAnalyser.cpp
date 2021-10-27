@@ -26,7 +26,6 @@ void treeAnalyser<T>::erase(string key) {
     treeMap.erase(treeMap.find(key));
     medianFinder.erase(treeMap[key]);
     pq.erase(treeMap[key]);
-
 }
 
 template<class T>
