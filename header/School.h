@@ -3,9 +3,9 @@
 
 #include "AuxiliaryFunctions.h"
 #include "treeAnalyser.h"
+#include "Secretary.h"
 #include "Layer.h"
 #include "Enums.h"
-#include "Secretary.h"
 #include "Tutor.h"
 #include <fstream>
 
