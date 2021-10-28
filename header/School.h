@@ -9,7 +9,6 @@
 #include "Tutor.h"
 #include <fstream>
 
-
 class School {
 private:
     static School *BGU;
