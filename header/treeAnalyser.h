@@ -2,10 +2,10 @@
 #define MAIN_C___TREEANALYSER_H
 
 #include <queue>
-#include "map"
-#include "Manager.h"
 #include "PriorityQueue.h"
 #include "MedianFinder.h"
+#include "Manager.h"
+#include "map"
 
 template<class T>
 
