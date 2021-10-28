@@ -18,7 +18,7 @@
 - Get average salary.
 - Get average grade.
 - Get median salary.
-- Get median GPA.
+- Get median grade.
 
 ** space complexity O( n + m ).
 
