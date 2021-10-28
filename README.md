@@ -16,7 +16,7 @@
 - Get the worker with the highest salary.
 - Get the student with the highest GPA.
 - Get average salary.
-- Get average GPA.
+- Get average grade.
 - Get median salary.
 - Get median GPA.
 
