@@ -16,9 +16,9 @@
 - Get the worker with the highest salary.
 - Get the student with the highest GPA.
 - Get average salary.
-- Get average grade.
+- Get average GPA.
 - Get median salary.
-- Get median grade.
+- Get median GPA.
 
 ** space complexity O( n + m ).
 
