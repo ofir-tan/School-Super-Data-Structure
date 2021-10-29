@@ -1,20 +1,22 @@
 #ifndef MAIN_C___TREEANALYSER_H
 #define MAIN_C___TREEANALYSER_H
 
-#include <queue>
 #include "PriorityQueue.h"
 #include "MedianFinder.h"
 #include "Manager.h"
+#include "Trie.h"
 #include "map"
 
 template<class T>
 
 class treeAnalyser {
 private:
+    double averageVal;
+    // data structures:
+    Trie<T> dict;
     map<string, T> treeMap;
     PriorityQueue<T, Comp> pq;
     MedianFinder<T> medianFinder;
-    double averageVal;
 public:
     treeAnalyser() : averageVal(0) {};
     ~treeAnalyser();
@@ -22,17 +24,18 @@ public:
     void print();
     void insert(T &ptr);
     void erase(string key);
-    T &find(string name) { return treeMap[name]; }
+    T find(const string &name);
 
     // statistical methods:
     T top() { return pq.top(); }
     double avg() { return averageVal; }
+    unsigned int size(){return treeMap.size();}
     double median() { return medianFinder.findMedian(); }
 
     // operator overloading:
     void operator+=(T ptr) { insert(ptr); }
     void operator-=(string key) { erase(key); }
-    T &operator[](string name) { return find(name); }
+    T operator[](string name) { return find(name); }
 };
 
 #endif //MAIN_C___TREEANALYSER_H

@@ -15,6 +15,8 @@ private:
     vector<Layer *> layers;
     treeAnalyser<Worker *> workers;
     treeAnalyser<Student *> students;
+
+    // constructor:
     School(quantity numberOfLayers, quantity numberOfClasses);
 
 public:
@@ -31,17 +33,22 @@ public:
     void eraseStudent(const string &name) { students -= name; }
 
     // basic methods:
+    void info();
     void printWorkers();
     void printStudents();
     Worker *findWorker(const string &name) { return workers[name]; }
     Student *findStudent(const string &name) { return students[name]; }
-    bool isExist(string name); // soon
 
     // statistical methods:
-    Student *topStudent() { return students.top(); }
+    unsigned int workersSize() { return workers.size(); }
+    unsigned int studentsSize() { return students.size(); }
+
     Worker *topWorker() { return workers.top(); }
-    double meanSalary() { return workers.avg(); }
+    Student *topStudent() { return students.top(); }
+
     double meanGPA() { return students.avg(); }
+    double meanSalary() { return workers.avg(); }
+
     double medianGPA() { return students.median(); }
     double medianSalary() { return workers.median(); }
 };
