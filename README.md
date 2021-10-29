@@ -6,7 +6,7 @@
 - Import data from files.
 - Add new student/worker - logarithmic complexity.
 - Remove student/worker - logarithmic complexity.
-- Find student/worker - constant time (worst case!).
+- Search student/worker - constant time (worst case!).
 - Print details of all students (sorted alphabetically) - linear complexity.
 - Print details of all workers (sorted alphabetically) - linear complexity.
 
