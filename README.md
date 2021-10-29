@@ -10,8 +10,6 @@
 - Print details of all students (sorted alphabetically) - linear complexity.
 - Print details of all workers (sorted alphabetically) - linear complexity.
 
-- Get student/worker data by his name - logarithmic complexity.
-
 ## Statistical methods:
 **All of the following methods operate in time complexity of O(1).**
 - Get the worker with the highest salary.
