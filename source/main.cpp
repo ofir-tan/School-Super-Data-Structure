@@ -1,8 +1,9 @@
 #include <iostream>
 #include "School.h"
+
 using namespace std;
 
-#define PATH (string)"C:/Users/AppTa/Desktop/DataForProject/"
+#define PATH (string)"C:/Users/AppTa/Documents/Programming/C++/Project/School-Super-Data-Structure/data/"
 
 int main(int argc, char *argv[]) {
     School *bgu = School::getInstance(Six, Three);
@@ -10,17 +11,10 @@ int main(int argc, char *argv[]) {
     bgu->importStudents(PATH + "Students.txt");
     bgu->importWorkers(PATH);
 
-    bgu->printStudents();
-    bgu->printWorkers();
+    bgu->info();
 
-    bgu->topStudent()->info();
-    bgu->topWorker()->info();
-
-    cout << '\n' << bgu->meanGPA() << endl;
-    cout << bgu->meanSalary() << endl;
-
-    cout << '\n' << bgu->medianGPA() << endl;
-    cout << bgu->medianSalary() << endl;
+    if (bgu->findStudent("Jacki Mickey"))
+        bgu->findStudent("Jacki Mickey")->info();
 
     return 0;
 }

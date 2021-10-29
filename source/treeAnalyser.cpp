@@ -25,6 +25,7 @@ void treeAnalyser<T>::erase(string key) {
     averageVal = (averageVal * treeMap.size() + (-*treeMap[key])) / (treeMap.size() + 1);
     treeMap.erase(treeMap.find(key));
     medianFinder.erase(treeMap[key]);
+    dict.erase(key);
     pq.erase(treeMap[key]);
 
 }
@@ -34,5 +35,11 @@ void treeAnalyser<T>::insert(T &ptr) {
     averageVal = (+*ptr + averageVal * treeMap.size()) / (treeMap.size() + 1);
     treeMap[ptr->fullName()] = ptr;
     medianFinder.insert(ptr);
+    dict.insert(ptr);
     pq.push(ptr);
+}
+template<class T>
+T treeAnalyser<T>::find(const string &name) {
+    TrieNode<T> *node = dict.search(name);
+    return node ? node->getItem() : nullptr;
 }
