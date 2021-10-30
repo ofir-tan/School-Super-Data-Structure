@@ -22,6 +22,6 @@
 ** space complexity O(n + m).
 
 *#modern c++ #software design #OOP #Inheritances #polymorphism #data structures #priority queue #red–black tree #trie #vector #string #tree map #set
-#template #Iterators #singleton #enums #stl containers #operator overloading #comparators #files.*
+#template #Iterators #singleton #enums #stl containers #operator overloading #RTTI #comparators #files.*
  
 © Ofir Tanami, 2021.
