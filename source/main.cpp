@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
     for (auto &s: secretary)
         s->info();
 
-    // for comparing times with/without threads:
+    // to comparing times with/without threads:
     auto stop = chrono::high_resolution_clock::now();
     auto duration = chrono::duration_cast<std::chrono::microseconds>(stop - start);
     cout << "\nExecution Time: " << duration.count() << endl;
