@@ -4,12 +4,12 @@
 
 ## Basic methods:
 - Import data from files.
-- Add new student/worker - logarithmic complexity.
 - Remove student/worker - logarithmic complexity.
+- Add new student/worker - logarithmic complexity.
 - Search student/worker - constant time (worst case!).
-- Print details of all students (sorted alphabetically) - linear complexity.
+- Get vector of workers by type (RTTI) - linear complexity.
 - Print details of all workers (sorted alphabetically) - linear complexity.
-
+- Print details of all students (sorted alphabetically) - linear complexity.
 ## Statistical methods:
 **All of the following methods operate in time complexity of O(1).**
 - Get the worker with the highest salary.
