@@ -20,6 +20,11 @@ private:
 public:
     treeAnalyser() : averageVal(0) {};
     ~treeAnalyser();
+
+    // iterators:
+    auto end() { return treeMap.end(); }
+    auto begin() { return treeMap.begin(); }
+
     // method's:
     void print();
     void insert(T &ptr);
@@ -29,7 +34,7 @@ public:
     // statistical methods:
     T top() { return pq.top(); }
     double avg() { return averageVal; }
-    unsigned int size(){return treeMap.size();}
+    unsigned int size() { return treeMap.size(); }
     double median() { return medianFinder.findMedian(); }
 
     // operator overloading:

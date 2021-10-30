@@ -7,6 +7,7 @@
 #include "Layer.h"
 #include "Enums.h"
 #include "Tutor.h"
+#include <mutex>
 #include <fstream>
 
 class School {
@@ -15,6 +16,10 @@ private:
     vector<Layer *> layers;
     treeAnalyser<Worker *> workers;
     treeAnalyser<Student *> students;
+
+    // mutex:
+    mutex mx_student;
+    mutex mx_worker;
 
     // constructor:
     School(quantity numberOfLayers, quantity numberOfClasses);
@@ -38,6 +43,9 @@ public:
     void printStudents();
     Worker *findWorker(const string &name) { return workers[name]; }
     Student *findStudent(const string &name) { return students[name]; }
+    // RTTI:
+    template<typename T>
+    vector<T> getWorkers();
 
     // statistical methods:
     unsigned int workersSize() { return workers.size(); }
@@ -54,3 +62,14 @@ public:
 };
 
 #endif
+
+// template function:
+template<typename T>
+vector<T> School::getWorkers() {
+    vector<T> vec_workers;
+    for (const auto&[name, worker]: workers)
+        if (dynamic_cast<T>(worker))
+            vec_workers.push_back(dynamic_cast<T>(worker));
+    return vec_workers;
+}
+
