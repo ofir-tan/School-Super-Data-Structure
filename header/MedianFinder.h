@@ -19,6 +19,7 @@ public:
     void insert(T item);
     void erase(T item);
     double findMedian();
+    unsigned int size();
 };
 
 #endif //MAIN_CPP_MEDIANFINDER_H

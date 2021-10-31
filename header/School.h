@@ -16,11 +16,9 @@ private:
     vector<Layer *> layers;
     treeAnalyser<Worker *> workers;
     treeAnalyser<Student *> students;
-
     // mutex:
     mutex mx_student;
     mutex mx_worker;
-
     // constructor:
     School(quantity numberOfLayers, quantity numberOfClasses);
 
@@ -59,11 +57,18 @@ public:
 
     double medianGPA() { return students.median(); }
     double medianSalary() { return workers.median(); }
+
+    vector<Student *> certainCondition(const function<bool(Student *)> &func) {
+        return students.certainCondition(func);
+    }
+    vector<Worker *> certainCondition(const function<bool(Worker *)> &func) {
+        return workers.certainCondition(func);
+    }
 };
 
 #endif
 
-// template function:
+// template functions:
 template<typename T>
 vector<T> School::getWorkers() {
     vector<T> vec_workers;
@@ -72,4 +77,3 @@ vector<T> School::getWorkers() {
             vec_workers.push_back(dynamic_cast<T>(worker));
     return vec_workers;
 }
-

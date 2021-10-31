@@ -3,6 +3,7 @@
 
 #include "PriorityQueue.h"
 #include "MedianFinder.h"
+#include <functional>
 #include "Manager.h"
 #include "Trie.h"
 #include "map"
@@ -36,6 +37,8 @@ public:
     double avg() { return averageVal; }
     unsigned int size() { return treeMap.size(); }
     double median() { return medianFinder.findMedian(); }
+    vector<T> certainCondition(const function<bool(T item)> &func);
+
 
     // operator overloading:
     void operator+=(T ptr) { insert(ptr); }
@@ -44,3 +47,4 @@ public:
 };
 
 #endif //MAIN_C___TREEANALYSER_H
+

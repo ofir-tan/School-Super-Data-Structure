@@ -21,7 +21,7 @@ public:
     // methods:
     virtual bool isOutstanding() = 0;
     string fullName() { return firstName + ' ' + lastName; }
-    virtual void info() { cout << "\nFirst Name: " << firstName << " | Last Name: " << lastName << '.' << endl; }
+    virtual void info() { cout << "First Name: " << firstName << " | Last Name: " << lastName << '.' << endl; }
 };
 
 #endif
