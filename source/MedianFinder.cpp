@@ -37,5 +37,10 @@ void MedianFinder<T>::balance() {
 
 template<class T>
 double MedianFinder<T>::findMedian() {
+    if (size() == 0) return 0;
     return minHeap.size() > maxHeap.size() ? +*minHeap.top() : ((double) +*maxHeap.top() + +*minHeap.top()) / 2;
+}
+template<class T>
+unsigned int MedianFinder<T>::size() {
+    return minHeap.size() + maxHeap.size();
 }

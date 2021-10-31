@@ -43,3 +43,12 @@ T treeAnalyser<T>::find(const string &name) {
     TrieNode<T> *node = dict.search(name);
     return node ? node->getItem() : nullptr;
 }
+
+template<class T>
+vector<T> treeAnalyser<T>::certainCondition(const function<bool(T)> &func) {
+    vector<T> res;
+    for (const auto&[key, item]: treeMap)
+        if (func(item))
+            res.push_back(item);
+    return res;
+}

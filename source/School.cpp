@@ -118,13 +118,20 @@ void School::printStudents() {
 }
 
 void School::info() {
+    cout << "****************************************" << endl;
+    cout << "\tSTATISTICS OF THE SCHOOL:" << endl;
     cout << "Number Of Employees: " << workersSize() << endl;
     cout << "Average Salary: " << meanSalary() << " $" << endl;
     cout << "Median Salary: " << medianSalary() << " $" << endl;
-    topWorker()->info();
-    cout << "----------------------" << endl;
+    cout << "Top Worker:" << endl;
+    if (topWorker()) topWorker()->info();
+    cout << "----------------------------------------" << endl;
     cout << "Number Of Students: " << studentsSize() << endl;
     cout << "Average Grade: " << meanGPA() << endl;
     cout << "Median Grade: " << medianGPA() << endl;
-    topStudent()->info();
+    cout << "Top Student:" << endl;
+    if (topStudent()) topStudent()->info();
+    cout << "****************************************" << endl;
 }
+
+
