@@ -11,6 +11,8 @@
 - Print details of all workers (sorted alphabetically) - linear complexity.
 - Print details of all students (sorted alphabetically) - linear complexity.
 ## Statistical methods:
+- Get the workers that meet a certain condition - linear complexity.
+- Get the students that meet a certain condition - linear complexity.
 **All of the following methods operate in time complexity of O(1).**
 - Get the worker with the highest salary.
 - Get the student with the highest GPA.
