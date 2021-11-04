@@ -9,6 +9,7 @@
 - Search student/worker - constant time (worst case!).
 - Get vector of workers by type (RTTI) - linear complexity.
 - Print details of all workers/students (sorted alphabetically) - linear complexity.
+- Get vector of students sorted according to the user's choice (default: by GPA) - linear complexity.
 
 ## Statistical methods:
 - Get the workers that meet a certain condition (default: outstanding) - linear complexity.
