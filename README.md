@@ -11,8 +11,8 @@
 - Print details of all workers/students (sorted alphabetically) - linear complexity.
 
 ## Statistical methods:
-- Get the workers that meet a certain condition (default: Outstanding) - linear complexity.
-- Get the students that meet a certain condition (default: Outstanding) - linear complexity.
+- Get the workers that meet a certain condition (default: outstanding) - linear complexity.
+- Get the students that meet a certain condition (default: outstanding) - linear complexity.
 
 **All of the following methods operate in time complexity of O(1).**
 - Get the worker with the highest salary.
