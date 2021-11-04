@@ -1,8 +1,8 @@
 # **'School - Super Data Structure' - Personal Project.**
 
-### In this project, I designed a data structure with the following capabilities:
+#### In this project, I designed a data structure with the following capabilities:
 
-## Basic methods:
+### Basic methods:
 | Basic Methods  | Time Complexity |
 | ------------- | ------------- |
 | Import data from files | linear |
