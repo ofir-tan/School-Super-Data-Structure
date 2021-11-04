@@ -2,7 +2,7 @@
 
 ### In this project, I designed a data structure with the following capabilities:
 
-| ## Basic methods: |
+## Basic methods:
 - Import data from files.
 - Remove student/worker - logarithmic complexity.
 - Add new student/worker - logarithmic complexity.
