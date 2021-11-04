@@ -23,17 +23,10 @@
 - Get median salary.
 - Get median GPA.
 
-## Static methods:
-- Set base salary for workers.
-- Set bonus salary for tutors.
 
 
-** space complexity O(n + m).
 
-*#modern c++ #software design #OOP #Inheritances #polymorphism #data structures #priority queue #red–black tree #trie #vector #string #tree map #set
-#template #Iterators #singleton #enums #stl containers #operator overloading #RTTI #comparators #files #counting sort.*
- 
-© Ofir Tanami, 2021.
+
 
 | Basic Methods  | Time Complexity |
 | ------------- | ------------- |
@@ -57,3 +50,16 @@
 | Get the workers that meet a certain condition (default: outstanding) | linear complexity |
 | Get the students that meet a certain condition (default: outstanding) | linear complexity |
 
+## Static methods:
+| Basic Methods  | Time Complexity |
+| ------------- | ------------- |
+| Set base salary for workers | constant time |
+| Set bonus salary for tutors | constant time |
+
+
+** space complexity O(n + m).
+
+*#modern c++ #software design #OOP #Inheritances #polymorphism #data structures #priority queue #red–black tree #trie #vector #string #tree map #set
+#template #Iterators #singleton #enums #stl containers #operator overloading #RTTI #comparators #files #counting sort.*
+ 
+© Ofir Tanami, 2021.
