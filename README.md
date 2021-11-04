@@ -35,12 +35,22 @@
  
 © Ofir Tanami, 2021.
 
-| Basic methods  | Time complexity |
+| Basic Methods  | Time Complexity |
 | ------------- | ------------- |
-| Import data from files.
+| Import data from files | linear |
 | Remove student/worker | logarithmic |
 | Add new student/worker | logarithmic |
 | Search student/worker | constant time (worst case!) |
 | Get vector of workers by type (RTTI) | linear |
 | Print details of all workers/students (sorted alphabetically) | linear |
 | Get vector of students sorted according to the user's choice (default: by GPA) | linear |
+
+| Get the workers that meet a certain condition (default: outstanding) | linear complexity |
+| Get the students that meet a certain condition (default: outstanding) | linear complexity |
+
+| Get the worker with the highest salary | constant time |
+| Get the student with the highest GPA | constant time |
+| Get average salary | constant time |
+| Get average GPA | constant time |
+| Get median salary | constant time |
+| Get median GPA | constant time |
