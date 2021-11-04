@@ -1,4 +1,4 @@
-# **'School - Super Data Structure' - Personal Project.**
+## **'School - Super Data Structure' - Personal Project.**
 
 #### In this project, I designed a data structure with the following capabilities:
 
@@ -13,7 +13,7 @@
 | Print details of all workers/students (sorted alphabetically) | linear |
 | Get vector of students sorted according to the user's choice (default: by GPA) | linear |
 
-## Statistical methods:
+### Statistical methods:
 | Description | Time Complexity |
 | ------------- | ------------- |
 | Get median GPA | constant time |
@@ -25,7 +25,7 @@
 | Get the workers that meet a certain condition (default: outstanding) | linear complexity |
 | Get the students that meet a certain condition (default: outstanding) | linear complexity |
 
-## Static methods:
+### Static methods:
 | Description | Time Complexity |
 | ------------- | ------------- |
 | Set base salary for workers | constant time |
