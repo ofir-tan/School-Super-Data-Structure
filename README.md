@@ -35,7 +35,7 @@
  
 © Ofir Tanami, 2021.
 
-| First Header  | Second Header |
+| ##First Header  | ##Second Header |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
