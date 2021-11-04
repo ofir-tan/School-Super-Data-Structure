@@ -3,31 +3,6 @@
 ### In this project, I designed a data structure with the following capabilities:
 
 ## Basic methods:
-- Import data from files.
-- Remove student/worker - logarithmic complexity.
-- Add new student/worker - logarithmic complexity.
-- Search student/worker - constant time (worst case!).
-- Get vector of workers by type (RTTI) - linear complexity.
-- Print details of all workers/students (sorted alphabetically) - linear complexity.
-- Get vector of students sorted according to the user's choice (default: by GPA) - linear complexity.
-
-## Statistical methods:
-- Get the workers that meet a certain condition (default: outstanding) - linear complexity.
-- Get the students that meet a certain condition (default: outstanding) - linear complexity.
-
-**All of the following methods operate in time complexity of O(1).**
-- Get the worker with the highest salary.
-- Get the student with the highest GPA.
-- Get average salary.
-- Get average GPA.
-- Get median salary.
-- Get median GPA.
-
-
-
-
-
-
 | Basic Methods  | Time Complexity |
 | ------------- | ------------- |
 | Import data from files | linear |
