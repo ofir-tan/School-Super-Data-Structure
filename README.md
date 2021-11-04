@@ -56,9 +56,6 @@
 | Set base salary for workers | constant time |
 | Set bonus salary for tutors | constant time |
 
-
-
-
 ** space complexity O(n + m).
 
 *#modern c++ #software design #OOP #Inheritances #polymorphism #data structures #priority queue #red–black tree #trie #vector #string #tree map #set
