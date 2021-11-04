@@ -3,7 +3,7 @@
 #### In this project, I designed a data structure with the following capabilities:
 
 ### Basic methods:
-| Basic Methods  | Time Complexity |
+| Description | Time Complexity |
 | ------------- | ------------- |
 | Import data from files | linear |
 | Remove student/worker | logarithmic |
@@ -13,8 +13,8 @@
 | Print details of all workers/students (sorted alphabetically) | linear |
 | Get vector of students sorted according to the user's choice (default: by GPA) | linear |
 
-
-| Statistical Methods  | Time Complexity |
+## Statistical methods:
+| Description | Time Complexity |
 | ------------- | ------------- |
 | Get median GPA | constant time |
 | Get median salary | constant time |
@@ -24,9 +24,9 @@
 | Get the worker with the highest salary | constant time |
 | Get the workers that meet a certain condition (default: outstanding) | linear complexity |
 | Get the students that meet a certain condition (default: outstanding) | linear complexity |
-## Statistical methods:
+
 ## Static methods:
-| Basic Methods  | Time Complexity |
+| Description | Time Complexity |
 | ------------- | ------------- |
 | Set base salary for workers | constant time |
 | Set bonus salary for tutors | constant time |
