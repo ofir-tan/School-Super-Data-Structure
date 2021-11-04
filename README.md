@@ -35,7 +35,7 @@
  
 © Ofir Tanami, 2021.
 
-| ##First Header  | ##Second Header |
+| ## Basic methods  | ## Time complexity |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
