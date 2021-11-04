@@ -1,6 +1,6 @@
 ## **'School - Super Data Structure' - Personal Project.**
 
-#### In this project, I designed a data structure with the following capabilities:
+### In this project, I designed a data structure with the following capabilities:
 
 ### Basic methods:
 | Description | Time Complexity |
