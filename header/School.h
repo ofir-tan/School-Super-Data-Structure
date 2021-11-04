@@ -7,7 +7,6 @@
 #include "Layer.h"
 #include "Enums.h"
 #include "Tutor.h"
-#include <mutex>
 #include <fstream>
 
 class School {
@@ -16,9 +15,7 @@ private:
     vector<Layer *> layers;
     treeAnalyser<Worker *> workers;
     treeAnalyser<Student *> students;
-    // mutex:
-    mutex mx_student;
-    mutex mx_worker;
+
     // constructor:
     School(quantity numberOfLayers, quantity numberOfClasses);
 
@@ -58,12 +55,18 @@ public:
     double medianGPA() { return students.median(); }
     double medianSalary() { return workers.median(); }
 
-    vector<Student *> certainCondition(const function<bool(Student *)> &func) {
+    vector<Student *> studentCondition(const function<bool(Student *)> &func =
+    [](Student *s) { return s->isOutstanding(); }) {
         return students.certainCondition(func);
     }
-    vector<Worker *> certainCondition(const function<bool(Worker *)> &func) {
+
+    vector<Worker *> workerCondition(const function<bool(Worker *)> &func =
+    [](Worker *s) { return s->isOutstanding(); }) {
         return workers.certainCondition(func);
     }
+
+    vector<Student *> sortStudent(const function<int(Student *)> &func = [](Student *s) { return s->avg() - 56; },
+                                  int size = 45);
 };
 
 #endif

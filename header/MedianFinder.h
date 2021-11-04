@@ -2,14 +2,13 @@
 #define MAIN_CPP_MEDIANFINDER_H
 
 #include "PriorityQueue.h"
-#include "Comparators.h"
 
-template<class T>
+template<class T, class C>
 
 class MedianFinder {
 private:
-    PriorityQueue<T, Comp> maxHeap;
-    PriorityQueue<T, Comp> minHeap;
+    PriorityQueue<T, C> maxHeap;
+    PriorityQueue<T, C> minHeap;
     void balance();
 public:
     // constructor:

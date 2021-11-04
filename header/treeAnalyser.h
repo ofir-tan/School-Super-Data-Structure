@@ -3,6 +3,7 @@
 
 #include "PriorityQueue.h"
 #include "MedianFinder.h"
+#include "Comparators.h"
 #include <functional>
 #include "Manager.h"
 #include "Trie.h"
@@ -17,7 +18,7 @@ private:
     Trie<T> dict;
     map<string, T> treeMap;
     PriorityQueue<T, Comp> pq;
-    MedianFinder<T> medianFinder;
+    MedianFinder<T, Comp> medianFinder;
 public:
     treeAnalyser() : averageVal(0) {};
     ~treeAnalyser();
@@ -39,7 +40,6 @@ public:
     double median() { return medianFinder.findMedian(); }
     vector<T> certainCondition(const function<bool(T item)> &func);
 
-
     // operator overloading:
     void operator+=(T ptr) { insert(ptr); }
     void operator-=(string key) { erase(key); }
@@ -47,4 +47,3 @@ public:
 };
 
 #endif //MAIN_C___TREEANALYSER_H
-

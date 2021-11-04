@@ -2,7 +2,6 @@
 #define MAIN_CPP_PRIORITYQUEUE_H
 
 #include <iostream>
-#include "Comparators.h"
 #include "set"
 
 using namespace std;
