@@ -1,4 +1,5 @@
 #include "School.h"
+#include "queue"
 
 School *School::BGU = nullptr;
 
@@ -134,4 +135,20 @@ void School::info() {
     cout << "****************************************" << endl;
 }
 
+vector<Student *> School::sortStudent(const function<int(Student *)> &func, int size) {
+    // counting sort:
+    vector<queue<Student *>> queues(size);
+    vector<Student *> res;
+    // push all the student into queues:
+    for (const auto &[name, student]: students) {
+        queues[func(student)].push(student);
+    }
 
+    for (int i = size - 1; i >= 0; i--) {
+        while (!queues[i].empty()) {
+            res.push_back(queues[i].front());
+            queues[i].pop();
+        }
+    }
+    return res;
+}

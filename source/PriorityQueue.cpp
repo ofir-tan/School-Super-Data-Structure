@@ -1,4 +1,5 @@
 #include "PriorityQueue.h"
+#include "Comparators.h"
 #include "Student.h"
 #include "Worker.h"
 

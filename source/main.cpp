@@ -19,13 +19,22 @@ int main(int argc, char *argv[]) {
     t2.join();
 
     bgu->info();
+//
+//    if (bgu->findStudent("Jacki Mickey"))
+//        bgu->findStudent("Jacki Mickey")->info();
+//
+//    auto secretary = bgu->getWorkers<Secretary *>();
+//    for (auto &s: secretary)
+//        s->info();
+//
+//    auto f = [](Student *s) { return s->fullName().size() > 21; };
+//    vector<Student*> v = bgu->certainCondition(f);
+//    for(auto &vv : v)
+//        vv->info();
 
-    if (bgu->findStudent("Jacki Mickey"))
-        bgu->findStudent("Jacki Mickey")->info();
-
-    auto secretary = bgu->getWorkers<Secretary *>();
-    for (auto &s: secretary)
-        s->info();
+    auto u = bgu->sortStudent();
+    for(auto &a: u)
+        cout << a->avg() << endl;
 
     // to comparing times with/without threads:
     auto stop = chrono::high_resolution_clock::now();
