@@ -45,9 +45,11 @@
 | Print details of all workers/students (sorted alphabetically) | linear |
 | Get vector of students sorted according to the user's choice (default: by GPA) | linear |
 
+## Statistical methods:
+| Basic Methods  | Time Complexity |
+| ------------- | ------------- |
 | Get the workers that meet a certain condition (default: outstanding) | linear complexity |
 | Get the students that meet a certain condition (default: outstanding) | linear complexity |
-
 | Get the worker with the highest salary | constant time |
 | Get the student with the highest GPA | constant time |
 | Get average salary | constant time |
