@@ -37,5 +37,10 @@
 
 | ## Basic methods  | ## Time complexity |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Import data from files.
+| Remove student/worker | logarithmic complexity.|
+| Add new student/worker | logarithmic complexity.|
+| Search student/worker | constant time (worst case!).|
+| Get vector of workers by type (RTTI) | linear complexity.|
+| Print details of all workers/students (sorted alphabetically) | linear complexity.|
+| Get vector of students sorted according to the user's choice (default: by GPA) | linear complexity. |
