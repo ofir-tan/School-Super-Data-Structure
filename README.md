@@ -7,29 +7,29 @@
 | ------------- | ------------- |
 | Import data from files | O(n) |
 | Remove student/worker | O(log(n)) |
-| Add new student/worker | logarithmic |
-| Search student/worker | constant time (worst case!) |
-| Get vector of workers by type (RTTI) | linear |
-| Print details of all workers/students (sorted alphabetically) | linear |
-| Get vector of students sorted according to the user's choice (default: by GPA) | linear |
+| Add new student/worker | O(log(n)) |
+| Search student/worker | O(1) [worst case!] |
+| Get vector of workers by type (RTTI) | O(n) |
+| Print details of all workers/students (sorted alphabetically) | O(n) |
+| Get vector of students sorted according to the user's choice (default: by GPA) | O(n) |
 
 ### Statistical methods:
 | Description | Time Complexity |
 | ------------- | ------------- |
-| Get median GPA | constant time |
-| Get median salary | constant time |
-| Get average GPA | constant time |
-| Get average salary | constant time |
-| Get the student with the highest GPA | constant time |
-| Get the worker with the highest salary | constant time |
-| Get the workers that meet a certain condition (default: outstanding) | linear |
-| Get the students that meet a certain condition (default: outstanding) | linear |
+| Get median GPA | O(1) |
+| Get median salary | O(1) |
+| Get average GPA | O(1) |
+| Get average salary | O(1) |
+| Get the student with the highest GPA | O(1) |
+| Get the worker with the highest salary | O(1) |
+| Get the workers that meet a certain condition (default: outstanding) | O(n) |
+| Get the students that meet a certain condition (default: outstanding) | O(n) |
 
 ### Static methods:
 | Description | Time Complexity |
 | ------------- | ------------- |
-| Set base salary for workers | constant time |
-| Set bonus salary for tutors | constant time |
+| Set base salary for workers | O(1) |
+| Set bonus salary for tutors | O(1) |
 
 ** space complexity O(n + m).
 
