@@ -22,8 +22,8 @@
 | Get average salary | constant time |
 | Get the student with the highest GPA | constant time |
 | Get the worker with the highest salary | constant time |
-| Get the workers that meet a certain condition (default: outstanding) | linear complexity |
-| Get the students that meet a certain condition (default: outstanding) | linear complexity |
+| Get the workers that meet a certain condition (default: outstanding) | linear |
+| Get the students that meet a certain condition (default: outstanding) | linear |
 
 ### Static methods:
 | Description | Time Complexity |
