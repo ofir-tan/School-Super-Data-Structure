@@ -67,6 +67,10 @@ public:
 
     vector<Student *> sortStudent(const function<int(Student *)> &func = [](Student *s) { return s->avg() - 56; },
                                   int size = 45);
+
+    // static method's:
+    static void setBaseSalary(int base = 25) { Worker::base = base; }
+    static void setBonusTutorSalary(int bonus = 30) { Worker::tutorBonus = bonus; }
 };
 
 #endif

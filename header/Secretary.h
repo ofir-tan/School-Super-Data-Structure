@@ -14,7 +14,7 @@ public:
             AdministrativeMan(firstName, lastName, yearsOfTeach, yearsOfManage, office),
             numOfChildren(numOfChildren) {}
     // methods:
-    [[nodiscard]] double getSalary() const override { return 200 * numOfChildren + basis; }
+    [[nodiscard]] double getSalary() const override { return 200 * numOfChildren + base; }
     bool isOutstanding() override { return yearsOfManage > 10; }
     void info() override;
 };

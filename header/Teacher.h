@@ -15,7 +15,7 @@ public:
     // methods:
     [[nodiscard]] unsigned int getNumOfCurses() const { return courses.size(); }
     [[nodiscard]] double getSalary() const override {
-        return basis * (1 + (double) courses.size() / 10) + 300 * yearsOfTeach;
+        return base * (1 + (double) courses.size() / 10) + 300 * yearsOfTeach;
     }
     bool isOutstanding() override { return 4 < courses.size(); }
     void printCourses();
