@@ -5,8 +5,8 @@
 ### Basic methods:
 | Description | Time Complexity |
 | ------------- | ------------- |
-| Import data from files | linear |
-| Remove student/worker | logarithmic |
+| Import data from files | O(n) |
+| Remove student/worker | O(log(n)) |
 | Add new student/worker | logarithmic |
 | Search student/worker | constant time (worst case!) |
 | Get vector of workers by type (RTTI) | linear |
