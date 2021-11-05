@@ -8,7 +8,7 @@
 | Import data from files | O(n) |
 | Remove student/worker | O(log(n)) |
 | Add new student/worker | O(log(n)) |
-| Search student/worker | O(1) [worst case!] |
+| Search student/worker | O(1) worst case! |
 | Get vector of workers by type (RTTI) | O(n) |
 | Print details of all workers/students (sorted alphabetically) | O(n) |
 | Get vector of students sorted according to the user's choice (default: by GPA) | O(n) |
