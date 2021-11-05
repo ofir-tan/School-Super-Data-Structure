@@ -3,7 +3,7 @@
 Manager *Manager::head = nullptr;
 
 double Manager::getSalary() const {
-    double extra = basis * 2 + yearsOfManage * 500;
+    double extra = base * 2 + yearsOfManage * 500;
     return extra + Teacher::getSalary();
 }
 

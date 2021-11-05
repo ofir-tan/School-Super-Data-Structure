@@ -1,6 +1,6 @@
 #include "Worker.h"
 
-int Worker::basis = 25;
+int Worker::base = 25;
 int Worker::tutorBonus = 30;
 
 void Worker::info() {
