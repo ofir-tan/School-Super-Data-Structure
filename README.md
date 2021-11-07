@@ -9,9 +9,8 @@
 | Remove student/worker | O(log(n)) |
 | Add new student/worker | O(log(n)) |
 | Search student/worker | O(1) worst case! |
-| Get vector of workers by type (RTTI) | O(n) |
 | Print details of all workers/students (sorted alphabetically) | O(n) |
-| Get vector of students sorted according to the user's choice (default: by GPA) | O(n) |
+
 
 ### Statistical methods:
 | Description | Time Complexity |
@@ -25,11 +24,13 @@
 | Get the workers that meet a certain condition (default: outstanding) | O(n) |
 | Get the students that meet a certain condition (default: outstanding) | O(n) |
 
-### Static methods:
+### Other methods:
 | Description | Time Complexity |
 | ------------- | ------------- |
 | Set base salary for workers | O(1) |
 | Set bonus salary for tutors | O(1) |
+| Get vector of workers by type (RTTI) | O(n) |
+| Get vector of students sorted according to the user's choice (default: by GPA) | O(n) |
 
 ** space complexity O(n + m).
 
