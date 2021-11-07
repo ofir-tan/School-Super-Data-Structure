@@ -2,7 +2,7 @@
 
 ### In this project, I designed a data structure with the following capabilities:
 
-### Basic methods:
+### Basic Methods:
 | Description | Time Complexity |
 | ------------- | ------------- |
 | Import data from files | O(n) |
@@ -12,7 +12,7 @@
 | Print details of all workers/students (sorted alphabetically) | O(n) |
 
 
-### Statistical methods:
+### Statistical Methods:
 | Description | Time Complexity |
 | ------------- | ------------- |
 | Get median GPA | O(1) |
@@ -24,7 +24,7 @@
 | Get the workers that meet a certain condition (default: outstanding) | O(n) |
 | Get the students that meet a certain condition (default: outstanding) | O(n) |
 
-### Other methods:
+### Other Methods:
 | Description | Time Complexity |
 | ------------- | ------------- |
 | Set base salary for workers | O(1) |
