@@ -33,6 +33,6 @@
 | Get vector of students sorted according to the user's choice (default: by GPA) | O(n) |
 
 *#modern c++ #software design #OOP #Inheritances #polymorphism #data structures #priority queue #red–black tree #trie #vector #string #tree map #set
-#template #Iterators #singleton #enums #stl containers #operator overloading #RTTI #comparators #files #counting sort.*
+#template #Iterators #singleton #enums #stl containers #operator overloading #RTTI #comparators #files #counting sort #factory design pattern*
  
 © Ofir Tanami, 2021.
