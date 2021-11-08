@@ -35,12 +35,5 @@ int main(int argc, char *argv[]) {
     auto duration = chrono::duration_cast<std::chrono::microseconds>(stop - start);
     cout << "\nExecution Time: " << duration.count() << endl;
 
-    int  b[1000];
-    int *a = move(b);
-    cout << &a << " " << *a << " " << &b << " " << *b <<  endl;
-    a[0] = 6;
-    cout << &a << " " << *a << " " << &b << " " << *b<< endl;
-    b[0] = 5;
-    cout << &a << " " << *a << " " << &b << " " << *b<< endl;
     return 0;
 }
