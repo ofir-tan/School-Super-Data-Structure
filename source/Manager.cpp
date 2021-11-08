@@ -8,23 +8,20 @@ double Manager::getSalary() const {
 }
 
 Manager *Manager::getInstance(string &firstName, string &lastName,
-                              double yearsOfTeach, double yearsOfManage,
-                              vector<string> &courses, string &office) {
+                              double yearsOfTeach, double yearsOfManage) {
     if (!head)
         head = new Manager(firstName, lastName,
-                           yearsOfTeach, yearsOfManage,
-                           courses, office);
+                           yearsOfTeach, yearsOfManage);
     else
         cout << "It is not possible to add more than one administrator." << endl;
     return head;
 }
 
 Manager::Manager(string &firstName, string &lastName,
-                 double yearsOfTeach, double yearsOfManage,
-                 vector<string> &courses, string &office) :
+                 double yearsOfTeach, double yearsOfManage) :
         Worker(firstName, lastName, yearsOfTeach, yearsOfManage),
-        Teacher(firstName, lastName, yearsOfTeach, yearsOfManage, courses),
-        AdministrativeMan(firstName, lastName, yearsOfTeach, yearsOfManage, office) {
+        Teacher(firstName, lastName, yearsOfTeach, yearsOfManage),
+        AdministrativeMan(firstName, lastName, yearsOfTeach, yearsOfManage) {
 }
 
 void Manager::info() {
@@ -36,4 +33,9 @@ void Manager::info() {
 void Manager::releaseInstance() {
     delete head;
     head = nullptr;
+}
+
+void Manager::importData(ifstream &file) {
+    Teacher::importData(file);
+    file >> office;
 }

@@ -1,4 +1,6 @@
 #include "Teacher.h"
+#include <fstream>
+#include "AuxiliaryFunctions.h"
 
 void Teacher::printCourses() {
     if (courses.empty())
@@ -15,4 +17,11 @@ void Teacher::info() {
     Worker::info();
     printCourses();
     cout << "Salary: " << getSalary() << " $" << endl;
+}
+
+void Teacher::importData(ifstream &file) {
+    string stringOfCourses;
+    file.get(); // remove '\n';
+    getline(file, stringOfCourses);
+    this->courses = stringToWords(stringOfCourses, ' ');
 }

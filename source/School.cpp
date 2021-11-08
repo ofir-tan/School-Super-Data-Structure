@@ -49,7 +49,7 @@ bool School::importStudents(const string &path) {
 }
 
 bool School::importWorkers(const string &path, jobs job) {
-    // open file:
+    // Factory Design Pattern:
     ifstream file;
     file.open(path);
     if (!file.is_open()) return false;
@@ -57,6 +57,7 @@ bool School::importWorkers(const string &path, jobs job) {
     string firstName, lastName;
     int yearsOfTeach, yearsOfManage;
     vector<string> courses;
+    Worker * newWorker;
 
     while (file >> firstName) {
         // get common values:
@@ -64,34 +65,17 @@ bool School::importWorkers(const string &path, jobs job) {
         file >> yearsOfTeach;
         file >> yearsOfManage;
 
-        if (job == Secretariat) {
-            int numOfChildren;
-            string office;
-            file >> office;
-            file >> numOfChildren;
-            workers += new Secretary(firstName, lastName, yearsOfTeach, yearsOfManage, office, numOfChildren);
-        } else {
-            string stringOfCourses;
-            file.get(); // remove '\n';
-            getline(file, stringOfCourses);
-            courses = stringToWords(stringOfCourses, ' ');
+        if (job == Secretariat)
+            newWorker = new Secretary(firstName, lastName, yearsOfTeach, yearsOfManage);
+        else if (job == Teachers)
+            newWorker = new Teacher(firstName, lastName, yearsOfTeach, yearsOfManage);
+        else if (job == Tutors)
+            newWorker = new Tutor(firstName, lastName, yearsOfTeach, yearsOfManage);
+        else
+            newWorker = Manager::getInstance(firstName, lastName, yearsOfTeach, yearsOfManage);
 
-            if (job == Teachers)
-                workers += new Teacher(firstName, lastName, yearsOfTeach, yearsOfManage, courses);
-            else if (job == Tutors) {
-                char layer;
-                int classNum;
-                file >> layer;
-                file >> classNum;
-                Class *tutorClass = layers[layer - 'a']->getClass(classNum - 1);
-                workers += new Tutor(firstName, lastName, yearsOfTeach, yearsOfManage, courses,
-                                     tutorClass);
-            } else {
-                string office;
-                file >> office;
-                workers += Manager::getInstance(firstName, lastName, yearsOfTeach, yearsOfManage, courses, office);
-            }
-        }
+        newWorker->importData(file);
+        workers += newWorker;
     }
     return true;
 }
