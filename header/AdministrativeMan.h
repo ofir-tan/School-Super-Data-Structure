@@ -5,14 +5,18 @@
 #include "Worker.h"
 
 class AdministrativeMan : virtual public Worker {
-private:
+protected:
     string office;
 public:
     // constructor:
     AdministrativeMan(string &firstName, string &lastName,
                       double yearsOfTeach, double yearsOfManage, string &office) :
             Worker(firstName, lastName, yearsOfTeach, yearsOfManage), office(office) {};
+    AdministrativeMan(string &firstName, string &lastName,
+                      double yearsOfTeach, double yearsOfManage) :
+            Worker(firstName, lastName, yearsOfTeach, yearsOfManage) {};
 
+    // methods:
     string getOffice() { return office; }
     void setOffice(string &newOffice) { office = newOffice; }
     void info() override;

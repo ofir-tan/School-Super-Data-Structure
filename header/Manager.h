@@ -4,22 +4,22 @@
 #include "Teacher.h"
 #include "AdministrativeMan.h"
 
+
 class Manager : public Teacher, public AdministrativeMan {
 private:
-    Manager(string &firstName, string &lastName, double yearsOfTeach, double yearsOfManage,
-            vector<string> &courses, string &office);
+    Manager(string &firstName, string &lastName, double yearsOfTeach, double yearsOfManage);
     static Manager *head;
 
 public:
     // static method's:
     static Manager *getInstance(string &firstName, string &lastName,
-                                double yearsOfTeach, double yearsOfManage,
-                                vector<string> &courses, string &office);
+                                double yearsOfTeach, double yearsOfManage);
     static Manager *getInstance() { return head; }
     static void releaseInstance();
 
     // method's:
     void info() override;
+    void importData(ifstream &file) override;
     [[nodiscard]] double getSalary() const override;
     bool isOutstanding() override { return yearsOfManage > 3; }
 

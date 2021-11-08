@@ -2,6 +2,7 @@
 #define MAIN_C___WORKER_H
 
 #include "Person.h"
+#include <fstream>
 
 class Worker : public Person {
 protected:
@@ -16,6 +17,7 @@ public:
               yearsOfManage(yearsOfManage) {}
     // methods:
     void info() override;
+    virtual void importData(ifstream &file) = 0;
     [[nodiscard]] virtual double getSalary() const = 0;
     static void setBasis(int newBasis) { base = newBasis; }
     static void setTutorBonus(int newBonus) { tutorBonus = newBonus; }
@@ -23,6 +25,7 @@ public:
     double operator-() const { return -getSalary(); }
     double operator+() const { return getSalary(); }
     bool operator<(const Worker &other) const { return getSalary() < other.getSalary(); }
+
     friend class School;
 };
 
