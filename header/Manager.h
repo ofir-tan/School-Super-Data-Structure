@@ -16,7 +16,8 @@ public:
                                 double yearsOfTeach, double yearsOfManage,
                                 vector<string> &courses, string &office);
     static Manager *getInstance() { return head; }
-    ~Manager() override { delete head; }
+    static void releaseInstance();
+
     // method's:
     void info() override;
     [[nodiscard]] double getSalary() const override;

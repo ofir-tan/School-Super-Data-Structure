@@ -11,18 +11,15 @@
 
 class School {
 private:
-    static School *BGU;
     vector<Layer *> layers;
     treeAnalyser<Worker *> workers;
     treeAnalyser<Student *> students;
 
     // constructor:
     School(quantity numberOfLayers, quantity numberOfClasses);
-
-public:
-    static School *getInstance() { return BGU; };
-    static School *getInstance(quantity numberOfLayers, quantity numberOfClasses);
     ~School();
+public:
+    static School &getInstance(quantity numberOfLayers = One, quantity numberOfClasses = One);
 
     // import data / remove:
     bool importStudents(const string &path);
@@ -65,8 +62,8 @@ public:
         return workers.certainCondition(func);
     }
 
-    vector<Student *> sortStudent(const function<int(Student *)> &func = [](Student *s) { return s->avg() - 56; },
-                                  int size = 45);
+    vector<Student *> sortStudents(const function<int(Student *)> &func = [](Student *s) { return s->avg() - 56; },
+                                   int size = 45);
 
     // static method's:
     static void setBaseSalary(int base = 25) { Worker::base = base; }
