@@ -16,7 +16,7 @@ void treeAnalyser<T>::print() {
 
 template<class T>
 treeAnalyser<T>::~treeAnalyser() {
-    for (const auto&[key, value]: treeMap)
+    for (auto&[key, value]: treeMap)
         delete value;
 }
 
@@ -27,7 +27,6 @@ void treeAnalyser<T>::erase(string key) {
     medianFinder.erase(treeMap[key]);
     dict.erase(key);
     pq.erase(treeMap[key]);
-
 }
 
 template<class T>

@@ -1,8 +1,6 @@
 #include "School.h"
 #include "queue"
 
-School *School::BGU = nullptr;
-
 School::School(quantity numberOfLayers, quantity numberOfClasses) {
     vector<char> layerName = {'a', 'b', 'c', 'd', 'e', 'f'};
     for (int i = 0; i < numberOfLayers; i++) {
@@ -13,17 +11,15 @@ School::School(quantity numberOfLayers, quantity numberOfClasses) {
 }
 
 School::~School() {
+    cout << "~School" << endl;
     for (auto &layer: layers)
         delete layer;
-    delete BGU;
 }
 
-School *School::getInstance(quantity numberOfLayers, quantity numberOfClasses) {
-    if (!BGU)
-        BGU = new School(numberOfLayers, numberOfClasses);
-    else
-        cout << "It is not possible to add more than one school." << endl;
-    return BGU;
+School &School::getInstance(quantity numberOfLayers, quantity numberOfClasses) {
+
+    static School bgu(numberOfLayers, numberOfClasses);
+    return bgu;
 }
 
 bool School::importStudents(const string &path) {
@@ -135,7 +131,7 @@ void School::info() {
     cout << "****************************************" << endl;
 }
 
-vector<Student *> School::sortStudent(const function<int(Student *)> &func, int size) {
+vector<Student *> School::sortStudents(const function<int(Student *)> &func, int size) {
     // counting sort:
     vector<queue<Student *>> queues(size);
     vector<Student *> res;

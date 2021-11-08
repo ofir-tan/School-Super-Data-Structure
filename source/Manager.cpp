@@ -33,3 +33,7 @@ void Manager::info() {
     cout << "Salary: " << getSalary() << " $" << endl;
 }
 
+void Manager::releaseInstance() {
+    delete head;
+    head = nullptr;
+}
