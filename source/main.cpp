@@ -2,7 +2,7 @@
 #include <chrono>
 #include <thread>
 #include "School.h"
-//extern static int counter;
+
 using namespace std;
 
 #define PATH (string)"C:/Users/AppTa/Documents/Programming/C++/Project/School-Super-Data-Structure/data/"
