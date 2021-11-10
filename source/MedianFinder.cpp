@@ -40,7 +40,8 @@ double MedianFinder<T, C>::findMedian() {
     if (size() == 0) return 0;
     return minHeap.size() > maxHeap.size() ? +*minHeap.top() : ((double) +*maxHeap.top() + +*minHeap.top()) / 2;
 }
+
 template<class T, class C>
-unsigned int MedianFinder<T, C>::size() {
+size_t MedianFinder<T, C>::size() {
     return minHeap.size() + maxHeap.size();
 }
