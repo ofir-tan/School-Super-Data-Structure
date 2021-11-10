@@ -8,6 +8,7 @@
 #include "Enums.h"
 #include "Tutor.h"
 #include <fstream>
+#include <memory>
 
 class School {
 private:

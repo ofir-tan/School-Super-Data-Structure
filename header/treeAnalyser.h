@@ -36,7 +36,7 @@ public:
     // statistical methods:
     T top() { return pq.top(); }
     double avg() { return averageVal; }
-    unsigned int size() { return treeMap.size(); }
+    size_t size() { return treeMap.size(); }
     double median() { return medianFinder.findMedian(); }
     vector<T> certainCondition(const function<bool(T item)> &func);
 

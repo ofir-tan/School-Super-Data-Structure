@@ -18,7 +18,7 @@ public:
     // method's:
     void erase(T item) { priorityQueue.erase(item); }
     void push(T item) { priorityQueue.insert(item); }
-    unsigned int size() { return priorityQueue.size(); }
+    size_t size() { return priorityQueue.size(); }
     T top();
     T pop();
 };
