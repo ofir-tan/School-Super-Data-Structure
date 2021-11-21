@@ -2,6 +2,8 @@
 #include <chrono>
 #include <thread>
 #include "School.h"
+#include <bitset>
+#include "Timer.h"
 
 using namespace std;
 
@@ -10,8 +12,7 @@ using namespace std;
 int main(int argc, char *argv[]) {
     School &bgu = School::getInstance(Six, Three);
 
-    auto start = chrono::high_resolution_clock::now();
-
+    Timer timer("School"); // timer to measure the speed-up with threads
     // demonstration of several methods:
     thread t1([&](const string &str) { bgu.importStudents(str); }, PATH + "Students.txt");
     thread t2([&](const string &str) { bgu.importWorkers(str); }, PATH);
@@ -27,13 +28,8 @@ int main(int argc, char *argv[]) {
     for (auto &s: secretary)
         s->info();
 
-    auto f = [](Student *s) { return s->fullName().size() > 21; };
-    vector<Student *> v = bgu.studentCondition(f);
+    auto f = [](Worker *s) { return s->getSalary() > 10 * 5; };
+    auto v = bgu.workerCondition(f);
 
-    // to comparing times with/without threads:
-    auto stop = chrono::high_resolution_clock::now();
-    auto duration = chrono::duration_cast<std::chrono::microseconds>(stop - start);
-    cout << "\nExecution Time: " << duration.count() << endl;
-    
     return 0;
 }

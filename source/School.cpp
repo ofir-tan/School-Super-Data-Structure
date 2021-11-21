@@ -1,5 +1,4 @@
 #include "School.h"
-#include "queue"
 
 School::School(quantity numberOfLayers, quantity numberOfClasses) {
     vector<char> layerName = {'a', 'b', 'c', 'd', 'e', 'f'};
@@ -22,11 +21,10 @@ School &School::getInstance(quantity numberOfLayers, quantity numberOfClasses) {
     return bgu;
 }
 
-bool School::importStudents(const string &path) {
+void School::importStudents(const string &path) {
 
     ifstream file;
     file.open(path);
-    if (!file.is_open()) return false;
 
     string firstName, lastName, grade;
     vector<double> grades;
@@ -45,47 +43,24 @@ bool School::importStudents(const string &path) {
         students += new Student(firstName, lastName, grades, layer, classNumber);
         grades.clear();
     }
-    return true;
 }
 
-bool School::importWorkers(const string &path, jobs job) {
+void School::importWorkers(const string &path, enum jobs job) {
     // Factory Design Pattern:
-    ifstream file;
-    file.open(path);
-    if (!file.is_open()) return false;
-
-    string firstName, lastName;
-    int yearsOfTeach, yearsOfManage;
-    vector<string> courses;
-    Worker * newWorker;
-
-    while (file >> firstName) {
-        // get common values:
-        file >> lastName;
-        file >> yearsOfTeach;
-        file >> yearsOfManage;
-
-        if (job == Secretariat)
-            newWorker = new Secretary(firstName, lastName, yearsOfTeach, yearsOfManage);
-        else if (job == Teachers)
-            newWorker = new Teacher(firstName, lastName, yearsOfTeach, yearsOfManage);
-        else if (job == Tutors)
-            newWorker = new Tutor(firstName, lastName, yearsOfTeach, yearsOfManage);
-        else
-            newWorker = Manager::getInstance(firstName, lastName, yearsOfTeach, yearsOfManage);
-
-        newWorker->importData(file);
+    WorkersFactory factory(path);
+    Worker *newWorker;
+    while (!factory.done()) {
+        newWorker = factory.createWorker(job);
+        newWorker->importData(factory.getFile());
         workers += newWorker;
     }
-    return true;
 }
 
-bool School::importWorkers(const string &path) {
-    bool a = importWorkers(path + "Tutors.txt", Tutors);
-    bool b = importWorkers(path + "Manager.txt", Managers);
-    bool c = importWorkers(path + "Teachers.txt", Teachers);
-    bool d = importWorkers(path + "Secretariat.txt", Secretariat);
-    return a && b && c && d;
+void School::importWorkers(const string &path) {
+    importWorkers(path + "Tutors.txt", Tutors);
+    importWorkers(path + "Manager.txt", Managers);
+    importWorkers(path + "Teachers.txt", Teachers);
+    importWorkers(path + "Secretariat.txt", Secretariat);
 }
 
 void School::printWorkers() {
@@ -104,13 +79,13 @@ void School::info() {
     cout << "Number Of Employees: " << workersSize() << endl;
     cout << "Average Salary: " << meanSalary() << " $" << endl;
     cout << "Median Salary: " << medianSalary() << " $" << endl;
-    cout << "Top Worker:" << endl;
+    cout << "\tTop Worker:" << endl;
     if (topWorker()) topWorker()->info();
     cout << "----------------------------------------" << endl;
     cout << "Number Of Students: " << studentsSize() << endl;
     cout << "Average Grade: " << meanGPA() << endl;
     cout << "Median Grade: " << medianGPA() << endl;
-    cout << "Top Student:" << endl;
+    cout << "\tTop Student:" << endl;
     if (topStudent()) topStudent()->info();
     cout << "****************************************" << endl;
 }
