@@ -10,5 +10,3 @@ add_executable(Project main.cpp Worker.h Person.h Student.h Secretary.h Administ
         Layer.h Layer.cpp Worker.cpp Student.cpp Secretary.cpp AdministrativeMan.cpp School.h School.cpp
         treeAnalyser.h Enums.h AuxiliaryFunctions.h AuxiliaryFunctions.cpp Comparators.h PriorityQueue.cpp
         PriorityQueue.h MedianFinder.cpp MedianFinder.h Trie.cpp Trie.h TrieNode.cpp TrieNode.h WorkersFactory.h)
-
-#add_executable(Project tempMain.cpp Timer.h countingSortThreads.cpp)
