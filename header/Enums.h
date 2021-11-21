@@ -1,5 +1,11 @@
 #ifndef MAIN_CPP_ENUMS_H
 #define MAIN_CPP_ENUMS_H
+#include "Worker.h"
+#include "Secretary.h"
+#include "Manager.h"
+#include "Tutor.h"
+#include "Teacher.h"
+
 enum jobs {
     Teachers, Tutors, Managers, Secretariat
 };

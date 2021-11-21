@@ -3,10 +3,12 @@
 
 #include "AuxiliaryFunctions.h"
 #include "treeAnalyser.h"
+#include "WorkersFactory.h"
 #include "Secretary.h"
 #include "Layer.h"
 #include "Enums.h"
 #include "Tutor.h"
+#include "queue"
 #include <fstream>
 #include <memory>
 
@@ -23,9 +25,9 @@ public:
     static School &getInstance(quantity numberOfLayers = One, quantity numberOfClasses = One);
 
     // import data / remove:
-    bool importStudents(const string &path);
-    bool importWorkers(const string &path);
-    bool importWorkers(const string &path, jobs job);
+    void importStudents(const string &path);
+    void importWorkers(const string &path);
+    void importWorkers(const string &path, enum jobs job);
 
     void eraseWorker(const string &name) { workers -= name; }
     void eraseStudent(const string &name) { students -= name; }

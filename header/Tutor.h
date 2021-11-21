@@ -16,6 +16,7 @@ public:
           double yearsOfManage, Class *class_ = nullptr) :
             Worker(firstName, lastName, yearsOfTeach, yearsOfManage),
             Teacher(firstName, lastName, yearsOfTeach, yearsOfManage), class_(class_) {};
+
     // get & set:
     Class *getClass() { return class_; }
     void setClass(Class *newClass) { class_ = newClass; }
@@ -24,7 +25,7 @@ public:
     bool isOutstanding() override {
         return class_->getSize() && 0.5 >= (double) class_->numOfOutstanding() / class_->getSize();
     }
-    void importData(ifstream &file);
+    void importData(ifstream &file) override;
     void info() override;
 };
 
