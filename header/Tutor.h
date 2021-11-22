@@ -5,13 +5,14 @@
 #include "Class.h"
 #include <fstream>
 
-class Tutor : virtual public Teacher {
+class Tutor : public Teacher {
 private:
     char layer{};
     int classNum{};
     Class *class_;
 public:
-    // constructor::
+    // constructors:
+    explicit Tutor(ifstream &file) : Teacher(file), Worker(file), class_(nullptr) {};
     Tutor(string &firstName, string &lastName, double yearsOfTeach,
           double yearsOfManage, Class *class_ = nullptr) :
             Worker(firstName, lastName, yearsOfTeach, yearsOfManage),

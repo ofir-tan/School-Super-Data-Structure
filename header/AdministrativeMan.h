@@ -9,6 +9,7 @@ protected:
     string office;
 public:
     // constructor:
+    explicit AdministrativeMan(ifstream &file) : Worker(file) {};
     AdministrativeMan(string &firstName, string &lastName,
                       double yearsOfTeach, double yearsOfManage, string &office) :
             Worker(firstName, lastName, yearsOfTeach, yearsOfManage), office(office) {};

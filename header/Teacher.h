@@ -8,6 +8,8 @@ protected:
     vector<string> courses;
 public:
     // constructors:
+    explicit Teacher(ifstream &file): Worker(file){};
+
     Teacher(string &firstName, string &lastName,
             double yearsOfTeach, double yearsOfManage,
             vector<string> &courses) :

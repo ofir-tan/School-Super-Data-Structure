@@ -4,13 +4,11 @@
 #include "AuxiliaryFunctions.h"
 #include "treeAnalyser.h"
 #include "WorkersFactory.h"
-#include "Secretary.h"
 #include "Layer.h"
-#include "Enums.h"
 #include "Tutor.h"
 #include "queue"
-#include <fstream>
-#include <memory>
+#include "Worker.h"
+
 
 class School {
 private:
@@ -72,7 +70,6 @@ public:
     static void setBaseSalary(int base = 25) { Worker::base = base; }
     static void setBonusTutorSalary(int bonus = 30) { Worker::tutorBonus = bonus; }
 };
-
 #endif
 
 // template functions:

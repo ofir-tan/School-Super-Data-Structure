@@ -11,7 +11,8 @@ protected:
     static int base;
     static int tutorBonus;
 public:
-    // constructor
+    // constructors
+    explicit Worker(ifstream &file);
     Worker(string &firstName, string &lastName, double yearsOfTeach, double yearsOfManage)
             : Person(firstName, lastName), yearsOfTeach(yearsOfTeach),
               yearsOfManage(yearsOfManage) {}

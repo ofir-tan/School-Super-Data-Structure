@@ -7,13 +7,13 @@
 
 class Manager : public Teacher, public AdministrativeMan {
 private:
+    explicit Manager(ifstream &file) : Teacher(file), AdministrativeMan(file), Worker(file) {};
     Manager(string &firstName, string &lastName, double yearsOfTeach, double yearsOfManage);
     static Manager *head;
 
 public:
     // static method's:
-    static Manager *getInstance(string &firstName, string &lastName,
-                                double yearsOfTeach, double yearsOfManage);
+    static Manager *getInstance(ifstream &file);
     static Manager *getInstance() { return head; }
     static void releaseInstance();
 

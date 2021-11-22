@@ -10,9 +10,8 @@ using namespace std;
 class WorkersFactory {
 private:
     ifstream file;
-    const string path;
 public:
-    explicit WorkersFactory(const string& path) : path(path) {
+    explicit WorkersFactory(const string& path){
         file.open(path);
         if (file.is_open())
             file.get();
@@ -22,27 +21,18 @@ public:
     ~WorkersFactory() { file.close(); }
     ifstream &getFile() { return file; }
     bool done() { return file.eof(); }
+
     Worker *createWorker(enum jobs job) {
-        // common variables:
-        string firstName, lastName;
-        int yearsOfTeach, yearsOfManage;
-
-        // read from file:
-        file >> firstName;
-        file >> lastName;
-        file >> yearsOfTeach;
-        file >> yearsOfManage;
-
         // creation:
         switch (job) {
             case Tutors:
-                return new Tutor(firstName, lastName, yearsOfTeach, yearsOfManage);
+                return new Tutor(file);
             case Teachers:
-                return new Teacher(firstName, lastName, yearsOfTeach, yearsOfManage);
+                return new Teacher(file);
             case Secretariat:
-                return new Secretary(firstName, lastName, yearsOfTeach, yearsOfManage);
+                return new Secretary(file);
             case Managers:
-                return Manager::getInstance(firstName, lastName, yearsOfTeach, yearsOfManage);
+                return Manager::getInstance(file);
             default :
                 return nullptr;
         }

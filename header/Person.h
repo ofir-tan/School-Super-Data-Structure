@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <vector>
 #include <numeric>
+#include <fstream>
 
 using namespace std;
 
@@ -15,6 +16,10 @@ private:
     string lastName;
 public:
     // constructor:
+    explicit Person(ifstream &file) {
+        file >> firstName;
+        file >> lastName;
+    }
     Person() : firstName("Ofir"), lastName("Tanami") {};
     Person(string &firstName, string &lastName) : firstName(firstName), lastName(lastName) {};
     virtual ~Person() = default;

@@ -7,7 +7,8 @@ class Secretary : public AdministrativeMan {
 private:
     int numOfChildren{};
 public:
-    // Constructors Signature
+    // Constructors:
+    explicit Secretary(ifstream &file) : AdministrativeMan(file), Worker(file) {};
     Secretary(string &firstName, string &lastName,
               double yearsOfTeach, double yearsOfManage, string &office, int numOfChildren) :
             Worker(firstName, lastName, yearsOfTeach, yearsOfManage),
