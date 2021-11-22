@@ -7,11 +7,9 @@ double Manager::getSalary() const {
     return extra + Teacher::getSalary();
 }
 
-Manager *Manager::getInstance(string &firstName, string &lastName,
-                              double yearsOfTeach, double yearsOfManage) {
+Manager *Manager::getInstance(ifstream &file) {
     if (!head)
-        head = new Manager(firstName, lastName,
-                           yearsOfTeach, yearsOfManage);
+        head = new Manager(file);
     else
         cout << "It is not possible to add more than one administrator." << endl;
     return head;
