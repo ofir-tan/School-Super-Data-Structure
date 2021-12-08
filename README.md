@@ -28,8 +28,8 @@
 | Set base salary for workers | O(1) |
 | Set bonus salary for tutors | O(1) |
 | Get vector of workers by type (RTTI) | O(n) |
-| Get the workers that meet a certain condition (default: outstanding) | O(n) |
-| Get the students that meet a certain condition (default: outstanding) | O(n) |
+| Get the workers that satisfy a certain condition (default: outstanding) | O(n) |
+| Get the students that satisfy a certain condition (default: outstanding) | O(n) |
 | Get vector of students sorted according to the user's choice (default: by GPA) | O(n) |
 
 *#modern c++ #software design #OOP #Inheritances #polymorphism #data structures #priority queue #red–black tree #trie #vector #string #tree map #set
